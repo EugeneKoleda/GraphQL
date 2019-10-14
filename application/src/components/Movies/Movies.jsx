@@ -6,6 +6,7 @@ import MoviesTable from '../MoviesTable/MoviesTable';
 import MoviesForm from '../MoviesForm/MoviesForm';
 
 import withHocs from './MoviesHoc';
+import MoviesSearch from "../MoviesSearch/MoviesSearch";
 
 class Movies extends React.Component {
   state = {
