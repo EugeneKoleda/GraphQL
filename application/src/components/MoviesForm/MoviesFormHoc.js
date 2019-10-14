@@ -25,7 +25,12 @@ const withGraphQL = compose(
                 refetchQueries: [{ query: moviesQuery }],
             })
         }),
+    }),
+    graphql(directorsQuery, {
+        options: ({ name='' }) => ({
+            variables: { name },
+        })
     })
 );
 
-export default compose(withStyles(styles), withGraphQL, graphql(directorsQuery));
+export default compose(withStyles(styles), withGraphQL);
